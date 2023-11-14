@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar li {
+  @apply cursor-pointer;
+}
+
+.navbar li:hover {
+  @apply text-dark;
+}
+
+.word-space {
+  word-spacing: 0.2rem;
+}
