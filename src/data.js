@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 1,
-    imgSrc: "/src/assets/projects/leadmarvels-advert.png",
+    imgSrc: "/projects/leadmarvels-advert.png",
     imgAlt: "Lead Marvels Website",
     link: "https://leadmarvels.com",
     title: "Lead Marvels Website",
@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     id: 2,
-    imgSrc: "/src/assets/projects/leadmarvels-newsletter.png",
+    imgSrc: "/projects/leadmarvels-newsletter.png",
     imgAlt: "Leadmarvels Newsletter Component",
     link: "https://leadmarvels.com/newsletter-signup",
     title: "Leadmarvels Newsletter Component",
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     id: 3,
-    imgSrc: "/src/assets/projects/mecpahub.png",
+    imgSrc: "/projects/mecpahub.png",
     imgAlt: "MECPA Knowledge Hub",
     link: "https://mecpahub.org/",
     title: "MECPA Knowledge Hub",
@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     id: 4,
-    imgSrc: "/src/assets/projects/iacpahub.png",
+    imgSrc: "/projects/iacpahub.png",
     imgAlt: "IACPAHUB Resource",
     link: "https://tinyurl.com/3puh3f4f",
     title: "IACPAHUB Resource",
@@ -33,7 +33,7 @@ export const projects = [
   },
   {
     id: 5,
-    imgSrc: "/src/assets/projects/smeshowcase.png",
+    imgSrc: "/projects/smeshowcase.png",
     imgAlt: "SME Showcase",
     link: "https://smeshowcase.com/",
     title: "SME Showcase",
@@ -41,7 +41,7 @@ export const projects = [
   },
   {
     id: 6,
-    imgSrc: "/src/assets/projects/alloravineyards.png",
+    imgSrc: "/projects/alloravineyards.png",
     imgAlt: "Allora Vineyards Website",
     link: "https://www.alloravineyards.com/",
     title: "Allora Vineyards Website",
@@ -49,7 +49,7 @@ export const projects = [
   },
   {
     id: 7,
-    imgSrc: "/src/assets/projects/amelinckx.png",
+    imgSrc: "/projects/amelinckx.png",
     imgAlt: "Andrew Amelinckx Website",
     link: "https://andrewamelinckx.com",
     title: "Andrew Amelinckx Website",
@@ -57,7 +57,7 @@ export const projects = [
   },
   {
     id: 8,
-    imgSrc: "/src/assets/projects/dekkerbabian.png",
+    imgSrc: "/projects/dekkerbabian.png",
     imgAlt: "Dekker Babian Website",
     link: "https://dekkerbabian.com/",
     title: "Dekker Babian Website",
@@ -65,7 +65,7 @@ export const projects = [
   },
   {
     id: 9,
-    imgSrc: "/src/assets/projects/hinkeinrealty.png",
+    imgSrc: "/projects/hinkeinrealty.png",
     imgAlt: "Hinkein Realty Website",
     link: "https://hinkeinrealty.com/",
     title: "Hinkein Realty",
