@@ -26,7 +26,7 @@ export const NavBarItems = () => {
           activeClass="active"
           to="skills"
           smooth={true}
-          offset={-40}
+          offset={-60}
           duration={500}
         >
           Skills
@@ -38,7 +38,7 @@ export const NavBarItems = () => {
           activeClass="active"
           to="work"
           smooth={true}
-          offset={-40}
+          offset={-60}
           duration={500}
         >
           Work
@@ -50,7 +50,7 @@ export const NavBarItems = () => {
           activeClass="active"
           to="contact"
           smooth={true}
-          offset={-40}
+          offset={-60}
           duration={500}
         >
           Contact

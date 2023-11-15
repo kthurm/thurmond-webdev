@@ -20,7 +20,7 @@ const Hero = () => {
           activeClass="active"
           to="work"
           smooth={true}
-          offset={-40}
+          offset={-60}
           duration={500}
         >
           <button className="my-6 w-fit flex group items-center  hover:border-accent rounded-full py-3 px-4 border border-white text-light hover:text-accent font-semibold">
