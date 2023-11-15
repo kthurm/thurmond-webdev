@@ -13,7 +13,7 @@ function Card(props) {
   };
   return (
     <div
-      className="card relative rounded shadow-lg flex flex-col overflow-hidden cursor-pointer"
+      className="card relative bg-accent rounded-md shadow-xl flex flex-col overflow-hidden cursor-pointer"
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
@@ -22,24 +22,25 @@ function Card(props) {
         src={props.imgSrc}
         alt={props.title}
       />
-      <div className="word-space py-5 px-2 text-xs uppercase font-bold text-center text-accent">
-        {props.description}
-      </div>
 
       <div
         className={
           isHovering
-            ? "transition duration-500 card-overlay absolute px-5 pb-2 pt-7 bg-accent opacity-100 font-light text-sm leading-[17px] text-left"
-            : "opacity-0 hidden"
+            ? "opacity-100 absolute bg-accent w-full h-full transition duration-500"
+            : "opacity-0 absolute w-full h-full transition duration-300"
         }
       >
-        <div className="flex flex-col justify-between">
-          <span className="inline text-light font-bold mr-1">
-            {props.title}
-          </span>
+        <div className="flex flex-col h-full w-full justify-center items-center text-center">
+          <div className="word-space py-3 px-2 text-lg font-bold">
+            {props.description}
+          </div>
+          <a
+            className="my-6 w-fit flex group items-center bg-dark hover:bg-accent rounded-full py-3 px-4 border border-white text-light font-semibold"
+            href={props.link}
+          >
+            Demo Project
+          </a>
         </div>
-
-        <div></div>
       </div>
     </div>
   );

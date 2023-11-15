@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.navbar li {
+a {
   @apply cursor-pointer;
 }
 
-.navbar li:hover {
+.navbar a:hover {
   @apply text-dark;
 }
 

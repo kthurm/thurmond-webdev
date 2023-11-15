@@ -33,7 +33,7 @@ const SocialSideNav = () => {
         <a
           className="flex items-center hover:text-accent lg:hover:text-light"
           target="_blank"
-          href="../assets/kthurmond-resume.pdf"
+          href="./src/assets/kthurmond-resume.pdf"
         >
           <div className="hidden lg:block pr-1.5 pt-0.5">Resume</div>
           <div>

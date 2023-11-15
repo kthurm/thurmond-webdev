@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 import NavBarItems from "./navBarItems";
@@ -9,9 +10,17 @@ function NavBar() {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="navbar sticky top-0 w-full bg-accent text-light border-b border-midtone shadow-xl z-10">
-      <div className="w-full mx-auto flex justify-between items-center py-1 px-5">
-        <div className="text-lg">kt</div>
+    <div className="sticky top-0 w-full bg-accent text-light border-b border-midtone shadow-xl z-10">
+      <div className="navbar w-full mx-auto flex justify-between items-center py-1 px-5">
+        <Link
+          className="text-lg cursor-pointer "
+          to="home"
+          smooth={true}
+          offset={-90}
+          duration={500}
+        >
+          KT
+        </Link>
         <ul className="hidden md:flex space-x-5 uppercase text-sm">
           <NavBarItems />
         </ul>
@@ -32,8 +41,8 @@ function NavBar() {
             <NavBarItems />
           </ul>
         </div>
-        <SocialSideNav />
       </div>
+      <SocialSideNav />
     </div>
   );
 }
