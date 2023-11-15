@@ -20,21 +20,27 @@ const Contact = () => {
           type="text"
           placeholder="Name"
           name="name"
+          required
         />
         <input
           className="border-light border bg-transparent rounded p-2"
           type="email"
           placeholder="Email"
           name="email"
+          required
         />
         <textarea
           className="border-light border bg-transparent rounded p-2"
           rows="10"
           placeholder="Message"
           name="message"
+          required
         />
         <div className="py-3">
-          <button className="ml-auto w-fit flex group items-center  hover:border-accent rounded-full py-3 px-4 border border-light text-l bg-transparentight hover:text-accent font-semibold">
+          <button
+            type="submit"
+            className="ml-auto w-fit flex group items-center  hover:border-accent rounded-full py-3 px-4 border border-light text-l bg-transparentight hover:text-accent font-semibold"
+          >
             <span className="pr-0.5">Let&#8217;s connect</span>
             <span className="">
               <HiArrowRight />
