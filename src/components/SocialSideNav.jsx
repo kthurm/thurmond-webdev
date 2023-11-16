@@ -1,10 +1,11 @@
-import React from "react";
 import { HiMiniPaperClip } from "react-icons/hi2";
 import { SlSocialLinkedin, SlSocialInstagram } from "react-icons/sl";
 
-const SocialSideNav = () => {
+const SocialSideNav = ({ className = "" }) => {
   return (
-    <ul className="fixed bg-midtone lg:bg-transparent rounded-l lg:rounded-none flex flex-row lg:flex-col bottom-5 lg:bottom-auto lg:top-[40%] right-0 lg:right-auto lg:left-5 lg:space-y-4 p-2 lg:p-0">
+    <ul
+      className={`lg:fixed bg-midtone lg:bg-transparent rounded-l lg:rounded-none flex flex-row lg:flex-col lg:top-[40%] lg:left-5 lg:space-y-4 p-2 lg:p-0 ${className}`}
+    >
       <li className="mr-4 pl-1 lg:-ml-[85px] lg:hover:-ml-[18px] duration-300">
         <a
           className="flex items-center hover:text-accent lg:hover:text-light"
@@ -29,7 +30,7 @@ const SocialSideNav = () => {
           </div>
         </a>
       </li>
-      <li className="mr-4 pl-1 lg:-ml-[82px] lg:hover:-ml-[18px] duration-300">
+      <li className="lg:mr-4 pl-1 lg:-ml-[82px] lg:hover:-ml-[18px] duration-300">
         <a
           className="flex items-center hover:text-accent lg:hover:text-light"
           target="_blank"
