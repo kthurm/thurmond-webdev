@@ -10,7 +10,7 @@ const Hero = () => {
           Senior Front-end Web Developer
         </h2>
         <p className="text-4xl lg:text-5xl opacity-40 lg:pr-5">
-          I am a web developer with 15+ years of experience developing and
+          I am a web developer with 15+ years of experience building and
           maintaining websites. Originally trained as a graphic designer, I
           create pixel-perfect sites that expertly bring UI/UX designers&#8217;
           visions to screens.
