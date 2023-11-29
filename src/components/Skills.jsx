@@ -15,7 +15,7 @@ const Skills = () => {
       <p className="text-xl md:text-2xl opacity-60">
         Some of the technolgies I regularly work with:
       </p>
-      <div className="grid md:grid-cols-4 gap-10 pt-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 pt-5">
         <div className="flex flex-col space-y-1">
           <img className="h-20 mx-auto" src={Tailwind} alt="Tailwind icon" />
           <div className="text-center text-sm opacity-40">tailwindcss</div>
