@@ -7,7 +7,7 @@ const Contact = () => {
       className="max-w-[800px] text-light px-5 lg:px-[120px] xl:px-24"
     >
       <h1 className="text-3xl md:text-5xl py-2">Contact</h1>
-      <p className="text-xl md:text-2xl opacity-40">
+      <p className="text-xl md:text-2xl opacity-60">
         Submit the form below or shoot me an email @ kthurmond.webdev@gmail.com.
       </p>
       <form

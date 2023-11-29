@@ -23,6 +23,8 @@ const SocialSideNav = ({ className = "" }) => {
         <a
           className="flex items-center hover:text-accent lg:hover:text-light"
           href="https://www.instagram.com/karathurmond/"
+          target={"_blank"}
+          rel="noreferrer"
         >
           <div className="hidden lg:block pr-1.5 pt-0.5">Instagram</div>
           <div>

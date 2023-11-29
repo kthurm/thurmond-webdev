@@ -7,7 +7,13 @@ a {
 }
 
 .navbar a:hover {
-  @apply text-dark;
+  @apply text-accent;
+}
+
+@screen md {
+  .navbar a:hover {
+    @apply text-dark;
+  }
 }
 
 .word-space {

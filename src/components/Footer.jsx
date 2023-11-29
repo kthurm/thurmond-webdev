@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="py-7 px-5 lg:mt-5 text-light/50 uppercase text-xs">
         @ Kara Thurmond
       </div>
-      <SocialSideNav className="md:hidden" />
+      <SocialSideNav className="lg:hidden" />
     </div>
   );
 };
