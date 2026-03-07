@@ -1,0 +1,23 @@
+---
+import Card from "./Card.astro";
+import { projects } from "../data/projects.ts";
+---
+
+<section id="work" class="text-light px-5 lg:pl-[120px] xl:pl-24">
+  <h1 class="text-3xl md:text-5xl py-2">Work</h1>
+
+  <p class="text-xl md:text-2xl opacity-60">
+    Several projects I&#8217;ve worked on:
+  </p>
+ <div class="my-5 grid sm:grid-cols-2 gap-12">
+    {projects.map(({ id, imgSrc, description, imgAlt, link, title }) => (
+      <Card
+        imgSrc={imgSrc}
+        description={description}
+        link={link}
+        title={title}
+      />
+    ))}
+  </div>
+ 
+</section>

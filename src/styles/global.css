@@ -1,0 +1,30 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;700;800;900&family=Nanum+Myeongjo&display=swap"); */
+
+@import "tailwindcss";
+
+@theme {
+  --color-lightest: #fcf1e2;
+  --color-light: #b5b5b4;
+  --color-medium: #6d7682;
+  --color-dark: #0b2240;
+  --color-accent: #6c7b8c;
+  --color-text: #333333;
+  --color-accent: #c82791;
+
+  /* --font-family-header: "Nanum Myeongjo", serif;
+  --font-family-body: "Inter", sans-serif; */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* height of fixed navbar */
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+a:link,
+button {
+  cursor: pointer;
+}

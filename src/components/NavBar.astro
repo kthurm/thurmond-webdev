@@ -1,0 +1,48 @@
+<nav
+  x-data="{ open: false }"
+  class="sticky top-0 w-full bg-medium text-light border-b border-light shadow-xl z-50"
+>
+  <div class="w-full mx-auto flex justify-between items-center py-1 px-5">
+    <!-- Logo -->
+    <a href="/#home" class="text-lg font-semibold hover:text-white">KT</a>
+
+    <!-- Hamburger (mobile) -->
+    <button
+      @click="open = !open"
+      :aria-expanded="open.toString()"
+      aria-label="Toggle navigation"
+      class="md:hidden focus:outline-none z-30"
+    >
+      <!-- Hamburger icon -->
+      <svg x-show="!open" x-cloak xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+
+      <!-- Close icon -->
+      <svg x-show="open" x-cloak xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Menu -->
+    <ul
+      @click.outside="open = false"
+      x-cloak
+      x-show="open || window.innerWidth >= 768"
+     x-transition
+      class="overflow-hidden absolute top-full right-0 bg-accent md:bg-transparent text-white shadow-2xl md:shadow-none md:static md:!flex flex-col md:flex-row justify-end space-y-3 md:space-y-0 md:space-x-5 px-5 py-3 md:px-0 md:py-0 uppercase text-sm"        
+     
+
+    >
+      <li><a class="hover:text-light" @click="open = false" href="/#home">Home</a></li>
+      <li><a class="hover:text-light" @click="open = false" href="/#skills">Skills</a></li>
+      <li><a class="hover:text-light" @click="open = false" href="/#work">Work</a></li>
+      <li><a class="hover:text-light" @click="open = false" href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Social nav (desktop only) -->
+  <div class="hidden lg:flex">
+    <slot />
+  </div>
+</nav>
