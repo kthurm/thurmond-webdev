@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+
+import Tailwind from "../assets/skills/tailwind.png";
+import Alpine from "../assets/skills/alpine.png";
+import Laravel from "../assets/skills/laravel.png";
+import Javascript from "../assets/skills/javascript.png";
+// import ReactImg from "../assets/skills/react.png";
+import Github from "../assets/skills/github.png";
+import AstroImg from "../assets/skills/astro.png";
+import AdobeImg from "../assets/skills/adobeCC.png";
+
+const skills = [
+  { img: Tailwind, label: "tailwindcss" },
+  { img: Alpine, label: "alpine.js" },
+  { img: Laravel, label: "laravel" },
+  { img: Javascript, label: "javascript" },
+  // { img: ReactImg, label: "react" },
+  { img: Github, label: "git / gitHub" },
+  { img: AstroImg, label: "astro" },
+  { img: AdobeImg, label: "Adobe CS" },
+];
+---
+
+<section id="skills" class="text-light px-5 lg:px-[120px] xl:px-24">
+  <h1 class="text-3xl md:text-5xl py-2">Skills</h1>
+
+  <p class="text-xl md:text-2xl opacity-60">
+    Some of the technologies I regularly work with:
+  </p>
+
+  <div class="flex flex-row flex-wrap gap-10  pt-5">
+    {skills.map((skill) => (
+      <div class="flex flex-col px-5 md:px-11 justify-center">
+        <Image
+          src={skill.img}
+          alt={`${skill.label} icon`}
+          width={80}
+          height={80}
+          class="mx-auto"
+        />
+        <div class="text-center text-sm opacity-40 pt-3">{skill.label}</div>
+      </div>
+    ))}
+  </div>
+</section>

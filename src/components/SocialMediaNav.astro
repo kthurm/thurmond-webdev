@@ -1,0 +1,58 @@
+
+---
+const { class: extraClass = "" } = Astro.props;
+import LinkedIn from "../assets/icons/LinkedIn.astro";
+import GitHub from "../assets/icons/GitHub.astro";
+import PaperClip from "../assets/icons/PaperClip.astro";
+---
+
+
+
+<ul
+  class={`lg:fixed bg-midtone lg:bg-transparent rounded-l lg:rounded-none
+          flex flex-row lg:flex-col lg:top-[40%] lg:left-5 lg:space-y-4
+          p-2 lg:p-0 ${extraClass}`}
+>
+  <!-- LinkedIn -->
+  <li class="mr-4 pl-1 lg:-ml-[84px] lg:hover:-ml-[18px] transition-all duration-300">
+    <a
+      href="https://www.linkedin.com/in/karathurmond/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center hover:text-accent lg:hover:text-light"
+      aria-label="LinkedIn profile"
+    >
+      <span class="hidden lg:block pr-1.5 pt-0.5">LinkedIn</span>
+
+      <!-- LinkedIn SVG -->
+        <LinkedIn />
+    </a>
+  </li>
+
+   <li class="mr-4 pl-1 lg:-ml-[75px] lg:hover:-ml-[18px] transition-all duration-300">
+    <a
+      href="https://github.com/kthurm"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center hover:text-accent lg:hover:text-light"
+      aria-label="GitHub Repository"
+    >
+      <span class="hidden lg:block pr-1.5 pt-0.5">GitHub</span>
+        <GitHub />
+    </a>
+  </li>
+
+  <!-- Resume -->
+  <li class="lg:mr-4 pl-1 lg:-ml-[82px] lg:hover:-ml-[18px] transition-all duration-300">
+    <a
+      href="/kthurmond-resume.pdf"
+      target="_blank"
+      class="flex items-center hover:text-accent lg:hover:text-light"
+      aria-label="Download resume"
+    >
+      <span class="hidden lg:block pr-1.5 pt-0.5">Resume</span>
+
+        <PaperClip />
+    </a>
+  </li>
+</ul>

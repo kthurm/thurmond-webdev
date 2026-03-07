@@ -1,0 +1,27 @@
+---
+import NavBar from "../components/NavBar.astro";
+import SocialMediaNav from "../components/SocialMediaNav.astro";
+import Footer from "../components/Footer.astro";
+import '../styles/global.css';
+
+---
+
+<html lang="en">
+  <head>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+ <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/icon.png" />
+</head>
+  <body class="relative  bg-dark text-white min-h-screen flex flex-col">
+    <NavBar />
+    <div class="hidden lg:block">
+    <SocialMediaNav />
+    </div>
+
+    <main class="max-w-screen-lg mx-auto flex flex-col space-y-20 pt-4 lg:pt-24 flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,38 @@
+---
+interface Props {
+  imgSrc: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
+const { imgSrc, title, description, link } = Astro.props;
+---
+
+<div
+  class="group relative bg-medium rounded-md shadow-xl flex flex-col overflow-hidden cursor-pointer"
+>
+  <img
+    class="object-cover object-top h-[300px] w-full"
+    src={imgSrc}
+    alt={title}
+  />
+
+  <!-- Hover Overlay -->
+  <div
+    class="absolute inset-0 bg-medium opacity-0 group-hover:opacity-100 transition duration-500"
+  >
+    <div class="flex flex-col h-full w-full justify-center items-center text-center">
+      <div class="py-3 px-2 text-lg font-bold text-white">
+        {description}
+      </div>
+
+      <a
+        class="my-6 w-fit flex items-center bg-dark hover:bg-accent rounded-full py-3 px-4 border border-white text-white font-semibold"
+        href={link} target="_blank"
+      >
+        Demo Project
+      </a>
+    </div>
+  </div>
+</div>

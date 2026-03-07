@@ -1,0 +1,57 @@
+---
+import ArrowRight from "../assets/icons/ArrowRight.astro";
+---
+
+<section
+  id="contact"
+  class="max-w-[800px] text-light px-5 lg:px-[120px] xl:px-24"
+>
+  <h1 class="text-3xl md:text-5xl py-2">Contact</h1>
+  <p class="text-xl md:text-2xl opacity-60">
+    Submit the form below or send me a message on  <a
+      href="https://www.linkedin.com/in/karathurmond/" target="_blank" rel="noopener noreferrer"
+      class="hover:text-accent"
+    >
+      LinkedIn
+    </a>
+  </p>
+
+  <form
+    action="https://getform.io/f/cea554fd-70f8-4754-abf5-b1e248396b47"
+    method="POST"
+    class="flex flex-col space-y-2 pt-5 text-white/80"
+  >
+    <input
+      class="border-light border bg-transparent rounded p-2"
+      type="text"
+      placeholder="Name"
+      name="name"
+      required
+    />
+    <input
+      class="border-light border bg-transparent rounded p-2"
+      type="email"
+      placeholder="Email"
+      name="email"
+      required
+    />
+    <textarea
+      class="border-light border bg-transparent rounded p-2"
+      rows="10"
+      placeholder="Message"
+      name="message"
+      required
+    />
+    <div class="py-3">
+      <button
+        type="submit"
+        class="ml-auto w-fit flex group items-center hover:border-accent rounded-full py-3 px-4 border border-light text-l bg-transparent hover:text-accent font-semibold"
+      >
+        <span class="pr-0.5">Let&lsquo;s connect</span>
+        <span>
+       <ArrowRight />
+        </span>
+      </button>
+    </div>
+  </form>
+</section>
