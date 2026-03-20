@@ -1,5 +1,6 @@
 <nav class="sticky top-0 w-full bg-medium text-light border-b border-light shadow-xl z-50">
   <div class="w-full mx-auto flex justify-between items-center py-1 px-5">
+    
     <!-- Logo -->
     <a href="/#home" class="text-lg font-semibold hover:text-white">KT</a>
 
@@ -14,11 +15,22 @@
     </button>
 
     <!-- Menu -->
-    <ul id="nav-menu" class="overflow-hidden absolute top-full right-0 bg-accent md:bg-transparent text-white shadow-2xl md:shadow-none md:static md:flex flex-col md:flex-row items-center justify-end space-y-3 md:space-y-0 md:space-x-5 mt-px md:mt-1 md:px-0 md:py-0 uppercase text-sm transition-[max-height] duration-300 ease-in-out max-h-0 md:max-h-full text-right">
-      <li class="pt-3 md:pt-0 px-3 md:px-0"><a class="hover:text-light md:hover:text-dark" href="/#home">Home</a></li>
-      <li class="px-3 md:px-0"><a class="hover:text-light md:hover:text-dark" href="/#skills">Skills</a></li>
-      <li class="px-3 md:px-0"><a class="hover:text-light md:hover:text-dark" href="/#work">Work</a></li>
-      <li class="pb-3 px-3 md:pb-0 md:px-0"><a class="hover:text-light md:hover:text-dark" href="/#contact">Contact</a></li>
+    <ul
+      id="nav-menu"
+      class="absolute top-full right-0 bg-accent md:bg-transparent text-white shadow-xl md:shadow-none md:static md:flex flex-col md:flex-row items-center justify-end space-y-3 md:space-y-0 md:space-x-5 mt-px md:mt-1 uppercase text-sm max-h-0 overflow-hidden md:overflow-visible transition-all duration-300 ease-in-out text-right md:max-h-full"
+    >
+      <li class="pt-3 md:pt-0 px-3 md:px-0">
+        <a class="hover:text-dark" href="/#home">Home</a>
+      </li>
+      <li class="px-3 md:px-0">
+        <a class="hover:text-dark" href="/#skills">Skills</a>
+      </li>
+      <li class="px-3 md:px-0">
+        <a class="hover:text-dark" href="/#work">Work</a>
+      </li>
+      <li class="pb-3 px-3 md:pb-0 md:px-0">
+        <a class="hover:text-dark" href="/#contact">Contact</a>
+      </li>
     </ul>
   </div>
 
@@ -35,42 +47,51 @@
   const closeIcon = document.getElementById('close-icon');
 
   const openMenu = () => {
-    navMenu.style.maxHeight = navMenu.scrollHeight + "px";
+    navMenu.classList.remove('max-h-0');
+    navMenu.classList.add('max-h-screen');
     hamburgerIcon.classList.add('hidden');
     closeIcon.classList.remove('hidden');
-  }
+  };
 
   const closeMenu = () => {
-    navMenu.style.maxHeight = "0";
+    navMenu.classList.remove('max-h-screen');
+    navMenu.classList.add('max-h-0');
     hamburgerIcon.classList.remove('hidden');
     closeIcon.classList.add('hidden');
-  }
+  };
 
   toggleButton.addEventListener('click', () => {
-    if (navMenu.style.maxHeight && navMenu.style.maxHeight !== "0px") {
-      closeMenu();
-    } else {
+    if (navMenu.classList.contains('max-h-0')) {
       openMenu();
+    } else {
+      closeMenu();
     }
   });
 
+  // Close when clicking a link
   navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 
+  // Safer outside click
   document.addEventListener('click', (e) => {
-    if (!navMenu.contains(e.target) && !toggleButton.contains(e.target) && navMenu.style.maxHeight !== "0px") {
+    const isInside = navMenu.contains(e.target) || toggleButton.contains(e.target);
+
+    if (!isInside && navMenu.classList.contains('max-h-screen')) {
       closeMenu();
     }
   });
 
+  // Handle resize
   const handleResize = () => {
     if (window.innerWidth >= 768) {
-      navMenu.style.maxHeight = "none";
+      navMenu.classList.remove('max-h-0');
+      navMenu.classList.add('max-h-full');
       hamburgerIcon.classList.add('hidden');
       closeIcon.classList.add('hidden');
     } else {
-      navMenu.style.maxHeight = "0";
+      navMenu.classList.remove('max-h-full');
+      navMenu.classList.add('max-h-0');
       hamburgerIcon.classList.remove('hidden');
       closeIcon.classList.add('hidden');
     }
