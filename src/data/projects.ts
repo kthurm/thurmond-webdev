@@ -66,10 +66,10 @@ export const projects: Project[] = [
   },
   {
     id: 8,
-    imgSrc: "/projects/iacpahub.png",
-    imgAlt: "IACPAHUB Resource",
-    link: "https://tinyurl.com/3puh3f4f",
-    title: "IACPAHUB Resource",
-    description: "Laravel, Alpine.js, Tailwindcss",
+    imgSrc: "/projects/eathquakes.png",
+    imgAlt: "Earthquake Dashboard",
+    link: "https://earthquakedashboard.thurmond-webdev.com/",
+    title: "Earthquake Dashboard",
+    description: "React, Tailwindcss",
   },
 ];
